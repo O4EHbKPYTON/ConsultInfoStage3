@@ -96,15 +96,16 @@ else
     else
         $componentPage = "list";
 
-    $arResult = array(
+    $arResult =[
         "FOLDER" => "/group",
         "URL_TEMPLATES" => array(
             "list" => htmlspecialcharsbx($APPLICATION->GetCurPage()),
             "detail" => htmlspecialcharsbx($APPLICATION->GetCurPage()."#ELEMENT_ID#"."/"),
         ),
         "VARIABLES" => $arVariables,
-        "ALIASES" => $arVariableAliases
-    );
+        "ALIASES" => $arVariableAliases,
+        "TITLE" => $arParams["TITLE"],
+   ];
 }
 
 

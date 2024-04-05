@@ -7,6 +7,7 @@ if (!defined("B_PROLOG_INCLUDED") || !B_PROLOG_INCLUDED) {
     die();
 }
 ?>
+
 <div class="container">
     <div class="users-group-list rounded-corners">
         <?php if (!empty($arResult["GROUPS"])): ?>

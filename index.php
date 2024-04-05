@@ -9,17 +9,23 @@ $APPLICATION->IncludeComponent(
         "SEF_FOLDER" => "/groups/",
         "SEF_URL_TEMPLATES" => array(
             "detail" => "#ELEMENT_ID#/",
-        )
+        ),
+        "TITLE" => "Группа пользователей"
     ]
 );
 $APPLICATION->IncludeComponent(
     "up:users.group.list",
     "",
     [
-        "SEF_FOLDER" => "/groups/",
-        "SEF_URL_TEMPLATES" => array(
-            "detail" => "#ELEMENT_ID#/",
-        )
+        "CASH_TIME" => "3600",
+        "TITLE" => "Группа пользователей"
+    ]
+);
+$APPLICATION->IncludeComponent(
+    "up:users.group.detail",
+    "",
+    [
+        "ID" => "1",
     ]
 );
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php");
