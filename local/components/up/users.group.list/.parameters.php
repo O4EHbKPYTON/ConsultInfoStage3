@@ -9,11 +9,11 @@ $arComponentParameters = [
             "TYPE" => "STRING",
             "DEFAULT" => 3600,
         ],
-        "PAGE_TITLE" => [
+        "TITLE" => [
             "PARENT" => "BASE",
             "NAME" => GetMessage("T_IBLOCK_DESC_PAGE_TITLE"),
             "TYPE" => "STRING",
-            "DEFAULT" => "Группы пользователей",
+
         ],
     ],
 ];

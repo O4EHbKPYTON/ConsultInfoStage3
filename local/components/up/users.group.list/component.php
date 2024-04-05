@@ -11,26 +11,26 @@ use Bitrix\Main\Data\Cache;
 
 // Проверка и инициализация входных параметров
 
-$arParams['CACHE_TIME'] = intval($arParams['CACHE_TIME']);
+$arParams["CACHE_TIME"] = intval($arParams["CACHE_TIME"]);
 
 
-$cacheId = implode('|', [
+$cacheId = implode("|", [
     SITE_ID,
     $APPLICATION->GetCurPage(),
     $USER->GetGroups()
 ]);
 // Кеш зависит только от подготовленных параметров без "~"
 foreach ($this->arParams as $k => $v) {
-    if (strncmp('~', $k, 1)) {
-        $cacheId .= ',' . $k . '=' . $v;
+    if (strncmp("~", $k, 1)) {
+        $cacheId .= "," . $k . "=" . $v;
     }
 }
 
-$cacheDir = '/' . SITE_ID . $this->GetRelativePath();
+$cacheDir = "/" . SITE_ID . $this->GetRelativePath();
 
 $cache = Cache::createInstance();
 
-if ($cache->startDataCache($arParams['CACHE_TIME'], $cacheId, $cacheDir)) {
+if ($cache->startDataCache($arParams["CACHE_TIME"], $cacheId, $cacheDir)) {
 
     $rsGroups = CGroup::GetList();
 // групп много поэтому в цикле
@@ -44,8 +44,8 @@ if ($cache->startDataCache($arParams['CACHE_TIME'], $cacheId, $cacheDir)) {
 
     // Создаем итоговый массив
     $arResult = [
-        'TITLE' => $arParams['TITLE'],
-        'GROUPS' => $arUsersGroups,
+        "TITLE" => $arParams["TITLE"],
+        "GROUPS" => $arUsersGroups,
     ];
 
     // Подключение шаблона компонента
@@ -54,8 +54,8 @@ if ($cache->startDataCache($arParams['CACHE_TIME'], $cacheId, $cacheDir)) {
     $templateCachedData = $this->GetTemplateCachedData();
 
     $cache->endDataCache([
-        'arResult' => $arResult,
-        'templateCachedData' => $templateCachedData,
+        "arResult" => $arResult,
+        "templateCachedData" => $templateCachedData,
     ]);
 } else {
     extract($cache->GetVars());

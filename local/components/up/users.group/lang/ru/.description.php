@@ -1,4 +1,4 @@
 <?php
-
-$MESS['USERS_GROUP_LIST_NAME'] = 'Название группы пользователй';
-$MESS['USERS_GROUP_LIST_DESCRIPTION'] = 'Описание списка пользователей';
+$MESS["T_IBLOCK_SEF_PAGE_USERS_DETAIL"] = "Название группы пользователй";
+$MESS["USERS_GROUP_NAME"] = "Группа пользователей";
+$MESS["USERS_GROUP_DESCRIPTION"] = "Описание списка пользователей";
