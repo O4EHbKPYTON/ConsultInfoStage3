@@ -1,0 +1,18 @@
+{
+  "name": "yan/up_users_group",
+  "type": "bitrix-d7-module",
+  "extra": {
+    "installer-name": "up_users_group",
+    "installer-paths": {
+      "local/modules/up.users.group/": ["type:bitrix-d7-module"]
+    }
+  },
+  "require": {
+    "composer/installers": "~2"
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true
+    }
+  }
+}
