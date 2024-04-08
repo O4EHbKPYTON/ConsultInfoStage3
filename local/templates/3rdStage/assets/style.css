@@ -1,0 +1,24 @@
+.users-group-list {
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif; /* добавляем шрифт */
+}
+
+.users-group-list table {
+    width: 100%;
+    border-collapse: separate;
+}
+
+.users-group-list th,
+.users-group-list td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.users-group-list th {
+    background-color: #f2f2f2;
+}
+
+.users-group-list tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
