@@ -9,9 +9,3 @@ function request(): Request
 	return Application::getInstance()->getContext()->getRequest();
 }
 
-
-if (file_exists(__DIR__ . '/module_updater.php'))
-{
-	include (__DIR__ . '/module_updater.php');
-}
-
